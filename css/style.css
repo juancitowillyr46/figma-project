@@ -3,9 +3,9 @@ input, button {
 }
 
 h4{
-    font-family: 'SF Pro Display';
+    font-family: 'SF Pro Display Bold';
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14.5px;
     line-height: 17px;
     text-align: left;
@@ -41,20 +41,24 @@ button, button:focus, button:active {
 
 button {
     font-family: 'SF Pro Display';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 16px;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    line-height: 16px !important;
     /* identical to box height */
 
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.05em;
-    font-feature-settings: 'pnum' on, 'lnum' on;
+    /* display: flex !important; */
+    align-items: center !important;
+    text-align: center !important;
+    letter-spacing: 0.05em !important;
+    font-feature-settings: 'pnum' on, 'lnum' on !important;
 
     color: #FFFFFF;
     border-radius: 0px !important;
+}
+
+img {
+    width: 100%;
 }
 
 .navbar {
@@ -67,6 +71,10 @@ button {
 .navbar-fixed-top {
     top: 0;
     border-width: 0 0 1px;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url('../image/menu.svg');
 }
 
 .bg-light{
@@ -129,7 +137,8 @@ button {
     background-color: #FFFEFE !important;
     border-color: #FFFEFE !important;
     outline: 0 !important;
-    box-shadow: 0 0 0 0.2rem rgb(0 0 0 / 50%) !important;
+    box-shadow: none !important;
+    border: 1px solid #808080 !important;
 }
 
 .btn-primary {
@@ -139,8 +148,21 @@ button {
     box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.btn-active {
+    color: #000000 !important;
+    background-color: #FFFEFE !important;
+    border-color: #FFFEFE !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    border: 1px solid #808080 !important;
+}
+
 .btn-form{
     padding-top: 30px;
+}
+
+.info-product{
+    padding-top: 75px;
 }
 
 .info-contact {
@@ -207,11 +229,11 @@ button {
 }
 
 .menu-item:nth-child(1) {
-    padding-left: 50px;
+    padding-left: 0px;
 }
 
 .menu-item:nth-child(3) {
-    padding-right: 50px;
+    padding-right: 0px;
 }
 
 
@@ -258,6 +280,11 @@ button {
     padding-right: 12px;
 }
 
+.footer{
+    text-align: center;
+    margin: 0 auto;
+}
+
 .footer .copyright{
     text-align: center;
 }
@@ -269,3 +296,260 @@ button {
     height: auto;
     opacity: 0.2;
 }
+
+.container-fluid-product{
+    padding-left: 22px !important; padding-right: 22px !important;
+}
+
+.lst-products{
+    padding-top: 10px;
+}
+    .lst-products h2 {
+        padding: 0px;
+        margin: 0px;
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.05em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        padding-top: 24px;
+    }
+
+    .lst-products h2 span {
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .lst-products h3 {
+        padding: 0px;
+        margin: 0px;
+        font-family: 'SF Pro Display Bold';
+        font-style: normal;
+        
+        font-size: 16px;
+        line-height: 19px;
+        /* identical to box height */
+        
+        letter-spacing: 0.05em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        
+        color: #000000;
+        padding-top: 6px;
+       
+    }
+
+    .lst-products h5 {
+        padding: 0px;
+        margin: 0px;
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        
+        color: #000000;
+        padding-top: 8px;
+        padding-bottom: 18px;
+    }
+
+    .lst-products .block-btns {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .lst-products .block-btns .btn-block:nth-child(1){
+        margin-right: 10px;
+    }
+
+    .lst-products .block-product{
+        padding-bottom: 60px;
+    }
+
+.detail-product h5 {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.05em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: #000000;
+    text-transform: uppercase;
+    padding: 0;
+    padding-bottom: 5px;
+}    
+
+.detail-product p {
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    
+    color: #000000;
+    padding: 0;
+}    
+
+.detail-product .entrega p{
+    font-weight: 300;
+    color: #4C9800;
+    padding-top: 20px;
+}
+
+.detail-product .detalle p{
+    font-weight: 200;
+}
+
+.detail-product .material p{
+    font-weight: 300;
+}
+
+.detail-product .material p{
+    font-weight: 300;
+}
+
+.detail-product .horario p{
+    font-weight: 200;
+}
+
+
+.detail-product .tiempo p{
+    font-weight: 200;
+}
+
+    .detail-product .tiempo p span{
+        font-weight: 500;
+    }
+
+
+    .detail-product .medio-pago {
+        padding-top: 60px;
+    }    
+
+        .detail-product .medio-pago img {
+            width: 63px;
+            height: 31px;
+        }    
+
+        .detail-product .medio-pago p {
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 9px;
+            line-height: 11px;
+            /* identical to box height */
+            
+            letter-spacing: 0.05em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            
+            color: #000000;
+        }  
+
+    /* .detail-product .colores,  */
+
+    .detail-product .tallas{
+        padding-bottom: 23px;
+        padding-top: 23px;
+    }    
+
+    .detail-product .colores{
+        padding-bottom: 20px;
+    }    
+
+    .detail-product .colores, .detail-product .tallas {
+        display: block;
+    }
+
+    .detail-product .colores ul, .detail-product .tallas ul{
+        margin: 0;
+        padding: 0;
+    }
+
+    .detail-product .colores ul li{
+        padding-bottom: 5px;
+    }
+
+    /* .detail-product .colores ul li:last-child{
+        padding-bottom: 20px;
+    } */
+
+        .detail-product .colores .color-content, .detail-product .tallas .talla-content{
+            display: inline-block;
+        }
+            .detail-product .colores .color-content .color{
+                width: 19px;
+                height: 19px;
+                background-color: #FFFFFF;
+                border-radius: 100%;
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: middle;
+                cursor: pointer;
+            }
+
+            .detail-product .colores .color-content span{
+                font-family: 'SF Pro Display';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 0.05em;
+                font-feature-settings: 'pnum' on, 'lnum' on;
+                display: inline-block;
+                color: #000000;
+            }
+
+            .detail-product .colores .color-content .color1{
+                background-color: #200000;
+            }
+            .detail-product .colores .color-content .color2{
+                background-color: #F7B304;
+            }
+            .detail-product .colores .color-content .color3{
+                background-color: #F70404;
+            }
+            .detail-product .colores .color-content .color4{
+                background-color: #FFC4C4;
+            }
+            .detail-product .colores .color-content .color5{
+                background-color: #ACF9F4;
+            }
+
+    .detail-product .tallas ul li{
+        /* padding-top: 13px;
+        padding-bottom: 13px; */
+        padding-right: 10px;
+    }
+
+    .detail-product .tallas ul li{
+        display: inline-block;
+    }
+                    
+    .detail-product .tallas .talla-content .talla{
+        background-color: #FFFFFF;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        text-align: center;
+        border: 0.5px solid #000000;
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        /* line-height: 17px; */
+        /* identical to box height */
+
+        letter-spacing: 0.05em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+
+        color: #000000;
+    }
+

@@ -291,10 +291,10 @@ img {
 
 .web_login_background_opacity {
     width: 100%;
-    background-color: #292929;
+    background-color: #000000;
     position: absolute;
-    height: auto;
-    opacity: 0.2;
+    height: 100%;
+    opacity: 0.4;
 }
 
 .container-fluid-product{
@@ -553,3 +553,201 @@ img {
         color: #000000;
     }
 
+.logo-home{
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 47px;
+    text-align: center;
+    background-color: #000000;
+    position: absolute;
+    width: 100%;
+}
+    .logo-home .logo{
+        text-transform: uppercase;
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 15.5px;
+        line-height: 18px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        color: #FFFEFE !important;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 47px;
+    }
+
+.home-section {
+    z-index: 999;
+    position: absolute;
+    top: 27%;
+    width: 100%;
+}
+
+    .home-content {
+        width: 100%;
+        text-align: center;
+    }
+
+        .home-title {
+            width: 100%;
+            text-align: center;
+            font-family: 'SF Pro Display 300';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 30px;
+            line-height: 36px;
+            letter-spacing: 0.05em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
+
+        .home-content .intro {
+            display: inline-block;
+            font-family: 'SF Pro Display';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14.5px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #FFFFFF;
+        }
+
+        .home-content .intro:first-child {
+            margin-right: 15px;
+        }
+
+        .home-content .intro:last-child {
+            margin-left: 15px;
+        }
+
+        .home-content p {
+            padding: 0;
+            margin: 0;
+            font-family: 'SF Pro Display';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14.5px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #FFFFFF;
+        }
+
+
+
+        .home-content .intro .info span {
+            font-weight: normal;
+            font-family: 'SF Pro Display 300';
+        }
+
+        .home-content button{
+            border: 0.7px solid #FFFFFF;
+            box-sizing: border-box;
+            filter: none !important;
+            color: #FFFFFF;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .home-content button:hover{
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+
+        .home-content button:hover, 
+        .home-content button:focus{
+            box-shadow: none !important;
+        }
+        
+
+        .home-content .intro .info{
+            font-family: 'SF Pro Display 700';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14.5px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+            color: #FFFFFF;
+            padding-bottom: 20px;
+            padding-top: 120px;
+        }
+
+        .home-content .intro .phrase{
+            font-family: 'SF Pro Display 400';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 0.05em;
+            font-feature-settings: 'pnum' on, 'lnum' on;
+
+            color: #FFFFFF;
+            padding-top: 20px;
+        }
+
+.footer-home{
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+    color: #FFFFFF;
+}
+
+@media only screen and (max-width: 320px) {
+    .home-section {
+        top: 16%;
+    }
+    .footer-home {
+        bottom: 35px;
+    }
+}
+
+
+.footer-home .copyright{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.footer-home .social-red{
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    padding-bottom: 16px;
+}
+
+.footer-home .social-red li{
+    list-style: none;
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+    .footer-home .rs {
+        font-family: 'SF Pro Display';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.05em;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        color: #fff;
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    .footer-home .rs span {
+        font-weight: 400;
+        text-transform: capitalize;
+    }

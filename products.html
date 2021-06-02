@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Index</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -12,32 +13,31 @@
 <body>
     <head class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Logotipo</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Nosotros</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Lo nuevo</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Otros</a>
-                  </li>
-                </ul>
-              </div>
+            <div class="container">
+                <a class="navbar-brand" href="#">Logotipo</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./us.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./products.html">Lo nuevo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./products.html">Otros</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </nav>
-        
+        </nav>
     </head>
-    <div class="container-fluid pr-0 pl-0 container-fluid-product">
+    <div class="container pr-0 pl-0 container-fluid-product">
         <div class="info-product">
             <div class="title">
                 <h4>MODELOS EXCLUSIVOS</h4>
@@ -48,50 +48,50 @@
         </div>
         <div class="lst-products">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 col-sm-6 col-md-offset-4">
                     <div class="block-product">
                         <img src="./image/image1.jpg" >
                         <h2>BLAZER <span>EMMA</span></h2>
                         <h3>S/19.99</h3>
                         <h5>Entrega: 24 horas</h5>
                         <div class="block-btns">
-                            <button type="button" class="btn btn-primary btn-block">MAS DETALLES</button>
+                            <a class="btn btn-primary btn-block" href="./detail.html">MAS DETALLES</a>
                             <button type="button" class="btn btn-primary btn-block btn-active">COMPRAR</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 col-sm-6 col-md-offset-4">
                     <div class="block-product">
                         <img src="./image/image1.jpg" >
                         <h2>BLAZER <span>EMMA</span></h2>
                         <h3>S/19.99</h3>
                         <h5>Entrega: 24 horas</h5>
                         <div class="block-btns">
-                            <button type="button" class="btn btn-primary btn-block">MAS DETALLES</button>
+                            <a class="btn btn-primary btn-block" href="./detail.html">MAS DETALLES</a>
                             <button type="button" class="btn btn-primary btn-block btn-active">COMPRAR</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 col-sm-6">
                     <div class="block-product">
                         <img src="./image/image1.jpg" >
                         <h2>BLAZER <span>EMMA</span></h2>
                         <h3>S/19.99</h3>
                         <h5>Entrega: 24 horas</h5>
                         <div class="block-btns">
-                            <button type="button" class="btn btn-primary btn-block">MAS DETALLES</button>
+                            <a class="btn btn-primary btn-block" href="./detail.html">MAS DETALLES</a>
                             <button type="button" class="btn btn-primary btn-block btn-active">COMPRAR</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12">
+                <div class="col-12 col-sm-6">
                     <div class="block-product">
                         <img src="./image/image1.jpg" >
                         <h2>BLAZER <span>EMMA</span></h2>
                         <h3>S/19.99</h3>
                         <h5>Entrega: 24 horas</h5>
                         <div class="block-btns">
-                            <button type="button" class="btn btn-primary btn-block">MAS DETALLES</button>
+                            <a class="btn btn-primary btn-block" href="./detail.html">MAS DETALLES</a>
                             <button type="button" class="btn btn-primary btn-block btn-active">COMPRAR</button>
                         </div>
                     </div>
@@ -119,5 +119,6 @@
             <a href="#" class="menu-item">ONE BERRY <span>Copyright 2021</span></a>
         </div>
     </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>

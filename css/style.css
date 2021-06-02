@@ -972,97 +972,80 @@ img {
     background-color: #000000 !important;
 }    
 
-/* {
-    display: grid;
-    grid-template-columns: -webkit-min-content auto;
-    grid-template-columns: min-content auto;
-    grid-gap: 0.5em;
-    font-size: 2.25rem;
-    color: var(--color);
-} */
-
-
-/* .radio {
-    display: grid;
-    grid-template-columns: -webkit-min-content auto;
-    grid-template-columns: min-content auto;
-    grid-gap: 0.5em;
-    font-size: 2.25rem;
-    color: var(--color);
-}
-
-.radio__input {
-    display: flex;
-}
-
-
-.radio__input input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    box-sizing: border-box;
-    padding: 0;
-}
-
-.radio-before .radio__control {
-    display: grid;
-    place-items: center;
-}
-
-.radio__control{
-    background-color: red;
-    display: block;
-    width: 19px;
-    height: 19px;
-    border-radius: 50%;
-    border: 0.1em solid currentColor;
-    transform: translateY(-0.05em);
-}
-
-.radio-before input:checked + .radio__control::before {
-    transform: scale(1);
-}
-.radio-beforet input + .radio__control::before {
-    content: "";
-    width: 0.5em;
-    height: 0.5em;
-    box-shadow: inset 0.5em 0.5em currentColor;
-    border-radius: 50%;
-    transition: 180ms transform ease-in-out;
-    transform: scale(0);
-} */
-
-.radio {
-    /* display: grid;
-    grid-template-columns: min-content auto;
-    grid-gap: 0.5em;
-    font-size: 2.25rem;
-    color: var(--color); */
+.radio_talla {
     display: inline-block;
-    /* width: 19px;
-    height: 19px;
-    background-color: #FFFFFF;
-    border-radius: 100%;
-    margin-right: 10px;
-    display: inline-block; */
     vertical-align: middle;
     cursor: pointer;
     margin: 0;
     padding-top: 0px;
 }
-/* .radio:focus-within .radio__label {
-    transform: scale(1.05);
-    opacity: 1;
+
+.radio__input__talla {
+    display: flex;
+}
+
+.radio__input__talla input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio__input__talla input:focus + .radio__control__talla {
+    border: 1px solid #000000;
+}
+
+.radio-gradient__talla input:checked + .radio__control__talla {
+    background: #000000;
+    background-position: center;
+    background-size: contain;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+}
+
+/* .radio__control__talla img {
+    display: none;
 } */
 
-/* .radio__label {
-    line-height: 1;
-    transition: 180ms all ease-in-out;
-    opacity: 0.8;
-} */
+.radio-before-talla .radio__control_talla {
+    display: grid;
+    place-items: center;
+}
+.radio-before-talla input + .radio__control__talla::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    box-shadow: inset 0.5em 0.5em #000000;
+    border-radius: 50%;
+    transition: 180ms transform ease-in-out;
+    transform: scale(0);
+}
+.radio-before-talla input:checked + .radio__control__talla::before {
+    transform: scale(1);
+}
+.radio__control__talla {
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    
+    transform: translateY(-0.05em);
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+
+.radio {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin: 0;
+    padding-top: 0px;
+}
+
 .radio__input {
     display: flex;
 }
+
 .radio__input input {
     opacity: 0;
     width: 0;
@@ -1070,15 +1053,10 @@ img {
 }
 
 .radio__input input:focus + .radio__control {
-    /* box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em #000000; */
     border: 1px solid #000000;
-    /* -webkit-transition: all 0.1s ease;
-    transition: all 0.1s ease; */
 }
 
 .radio-gradient input:checked + .radio__control {
-    /* background: radial-gradient(#000000 50%, rgba(59, 46, 46, 0) 60%);
-    border: 1px solid #000000; */
     background: url('../image/check-talla.svg');
     background-position: center;
     background-size: contain;
@@ -1088,10 +1066,6 @@ img {
 .radio__control img {
     display: none;
 }
-
-/* .radio-gradient input:checked + .radio__control img  {
-    display: none;
-} */
 
 .radio-before .radio__control {
     display: grid;

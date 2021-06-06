@@ -1,6 +1,6 @@
 $(function() {
-    $('.navbar-collapse').hide();
-    $('.navbar-toggler').click(function() {
-        $('.navbar-collapse').toggle();
+    //$('.navbar-collapsex').hide();
+    $('.toggler-wrapper-button').click(function() {
+        $('.navbar-collapsex').toggle();
     });
 });

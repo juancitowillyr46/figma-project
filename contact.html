@@ -6,74 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Index</title>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <head class="header">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Logotipo</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./us.html">Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./products.html">Lo nuevo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./products.html">Otros</a>
-                        </li>
-                    </ul>
+    <header class="header">
+        <div class="block-header">
+            <div class="block-logo"><a class="logo" href="#">Logotipo</a></div>
+            <div class="menu-toggler-button">
+                <div class="toggler-wrapper-button">
+                    <span class="toggler-icon"></span>
                 </div>
             </div>
-        </nav>
-    </head>
-    <div class="container pr-0 pl-0">
-        <div class="info">
-            <div class="title">
-                <h4>QUEREMOS CONOCERTE</h4>
-            </div>
-            <div class="description">
-                <p>...Déjanos tus datos!</p>
+            <div class="navbar-collapsex">
+                <div class="wrapper-menubar">
+                    <ul>
+                        <li >
+                            <a href="./index.html">Inicio</a>
+                        </li>
+                        <li >
+                            <a href="./us.html">Nosotros</a>
+                        </li>
+                        <li >
+                            <a href="./products.html">Lo nuevo</a>
+                        </li>
+                        <li >
+                            <a href="./products.html">Otros</a>
+                        </li>
+                    </ul>
+                    
+                </div>
             </div>
         </div>
-        
+    </header>
+    <div class="wrapper-container-main wrapper-container-register">
+        <h4 class="title-type-h text-aling-center">QUEREMOS CONOCERTE</h4>
+        <p class="text-type-e">..Déjanos tus datos!</p>
         <form class="form">
             <div class="form-group">
-                <label for="">NOMBRE</label>
-                <input type="text" class="form-control">
+                <label for="" class="label label-a">NOMBRE</label>
+                <input type="text" class="form-control form-input form-input-a">
             </div>
             <div class="form-group">
-                <label for="">CIUDAD</label>
-                <input type="text" class="form-control">
+                <label for="" class="label label-a">CIUDAD</label>
+                <input type="text" class="form-control form-input form-input-a">
             </div>
             <div class="form-group">
-                <label for="">TELÉFONO</label>
-                <input type="text" class="form-control">
+                <label for="" class="label label-a">TELÉFONO</label>
+                <input type="text" class="form-control form-input form-input-a">
             </div>
             <div class="form-group">
-                <label for="">INGRESA EL LINK DE TUS REDES</label>
-                <input type="text" class="form-control">  
+                <label for="" class="label label-a">CORREO</label>
+                <input type="text" class="form-control form-input form-input-a">  
+            </div>
+            
+            <div class="wrapper-hr">
+                <hr>
             </div>
             <div class="form-group">
-                <label for="">CUÉNTANOS SOBRE TI</label>
-                <textarea class="form-control" rows="4"></textarea>
+                <label for="" class="label-a">INGRESA TU CONTRASEÑA</label>
+                <input type="password" class="form-control form-input form-input-a">  
             </div>
             <div class="form-group">
-                <label for="">CUÉNTANOS TU EXP. SOBRE VENTAS</label>
-                <textarea class="form-control" rows="4"></textarea>
+                <label for="" class="label-a">CONFIRMAR CONTRASEÑA</label>
+                <input type="password" class="form-control form-input form-input-a">  
             </div>
             <div class="btn-form">
-                <button type="button" class="btn btn-primary btn-block">REGISTRAR</button>
+                <button type="button" class="type-button-form type-button-form-a text-aling-center">REGISTRAR</button>
             </div>
             
         </form>
@@ -86,10 +85,10 @@
         </div>
         <div>
             <ul class="social-red">
-                <li><a href="#"><img src="./image/Vector-1.svg"></a></li>
-                <li><a href="#"><img src="./image/Vector-2.svg"></a></li>
-                <li><a href="#"><img src="./image/Vector-3.svg"></a></li>
-                <li><a href="#"><img src="./image/Vector-4.svg"></a></li>
+                <li><a href="#"><img src="./images/Vector-1.svg"></a></li>
+                <li><a href="#"><img src="./images/Vector-2.svg"></a></li>
+                <li><a href="#"><img src="./images/Vector-3.svg"></a></li>
+                <li><a href="#"><img src="./images/Vector-4.svg"></a></li>
             </ul>
         </div>
         <div class="copyright">

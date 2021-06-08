@@ -6,7 +6,7 @@
 }
 html {
     position: relative;
-    /* min-height: 100%; */
+    min-height: 100%;
 }
 body  {
     padding: 0;
@@ -94,15 +94,36 @@ input {
     }
 }
 
-@media (min-width: 320px) and (max-width: 768px) {  
+.xzoom  {
+    margin-bottom: 5px;
+}
+
+.xzoom-container{
+    width: 334px;
+}
+
+@media (min-width: 375px) and (max-width:411px) {  
     .xzoom-container{
-        width: 335px;
-    }
-    .xzoom  {
-        margin-bottom: 5px;
+        width: 350px;
     }
 }
 
+/* @media (min-width: 359px) and (max-width:359px) {  
+    .xzoom-container{
+        width: 350px;
+    }
+} */
+
+@media (min-width: 320px) and (max-width:326px) {  
+    .xzoom-container{
+        width: 294px;
+    }
+}
+/* @media (min-width: 320px) and (max-width:326px) {  
+    .xzoom-container{
+        width: 294px;
+    }
+} */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -1197,14 +1218,27 @@ select::-ms-expand {
 }
 
 .title-type-e {
+
     font-family: 'SF Pro Display Semi Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* identical to box height */
+    letter-spacing: 0.05em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: #000000;
+
+    /* font-family: 'SF Pro Display Semi Bold';
     font-weight: bold;
     font-size: 12px;
     line-height: 14px;
     text-align: center;
     letter-spacing: 0.05em;
     font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #FFFFFF;
+    color: #000000; */
     /* text-transform: uppercase; */
 }
 
@@ -1549,7 +1583,15 @@ select::-ms-expand {
     .type-button-b, .type-button-a {
         width: 45%;
     }
+
 }
+
+@media (min-width: 320px) and (max-width: 359px) {  
+    .type-button{
+        font-size: 8px;
+    }
+}
+
 
 /* item Description */
 .item-description {

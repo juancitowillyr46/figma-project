@@ -8,9 +8,24 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <!-- <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="./js/jquery.exzoom.js"></script>
-    <link href="./js/jquery.exzoom.css" rel="stylesheet" type="text/css"/>
+    <link href="./js/jquery.exzoom.css" rel="stylesheet" type="text/css"/> -->
+    <script>
+        (function() {
+          var h, a, f;
+          a = document.getElementsByTagName('link');
+          for (h = 0; h < a.length; h++) {
+              f = a[h];
+              if (f.rel.toLowerCase().match(/stylesheet/) && f.href) {
+              var g = f.href.replace(/(&|\?)rnd=\d+/, '');
+              f.href = g + (g.match(/\?/) ? '&' : '?');
+              f.href += 'rnd=' + (new Date().valueOf());
+              }
+          } // for
+        })()   
+  
+      </script>
 </head>
 <body>
     <header class="header">

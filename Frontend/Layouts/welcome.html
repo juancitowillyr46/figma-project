@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Index</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        (function() {
+          var h, a, f;
+          a = document.getElementsByTagName('link');
+          for (h = 0; h < a.length; h++) {
+              f = a[h];
+              if (f.rel.toLowerCase().match(/stylesheet/) && f.href) {
+              var g = f.href.replace(/(&|\?)rnd=\d+/, '');
+              f.href = g + (g.match(/\?/) ? '&' : '?');
+              f.href += 'rnd=' + (new Date().valueOf());
+              }
+          } // for
+        })()   
+  
+      </script>
+</head>
+<body>
+    <header class="header">
+        <div class="block-header">
+            <div class="block-logo"><a class="logo" href="#">Logotipo</a></div>
+            <div class="menu-toggler-button">
+                <div class="toggler-wrapper-button">
+                    <span class="toggler-icon"></span>
+                </div>
+            </div>
+            <div class="navbar-collapsex">
+                <div class="wrapper-menubar">
+                    <ul>
+                        <li >
+                            <a href="./index.html">Inicio</a>
+                        </li>
+                        <li >
+                            <a href="./us.html">Nosotros</a>
+                        </li>
+                        <li >
+                            <a href="./products.html">Lo nuevo</a>
+                        </li>
+                        <li >
+                            <a href="./products.html">Otros</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper-container-main wrapper-container-welcome">
+        <!-- <div class="info"> -->
+            <h4 class="title-type-h text-aling-center">bienvenido<br>fanny</h4>
+        <!-- </div> -->
+        <div class="wrapper-welcome">
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.                                                                                            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.                                                                                            Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. 
+            </p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <a href="#" class="menu-item">Chat</a>
+            <a href="#" class="menu-item">Nosotros</a>
+            <a href="#" class="menu-item">Reserva tu pedido</a>
+        </div>
+        <div>
+            <ul class="social-red">
+                <li><a href="#"><img src="./images/svgs/Vector-1.svg"></a></li>
+                <li><a href="#"><img src="./images/svgs/Vector-2.svg"></a></li>
+                <li><a href="#"><img src="./images/svgs/Vector-3.svg"></a></li>
+                <li><a href="#"><img src="./images/svgs/Vector-4.svg"></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <a href="#" class="menu-item">ONE BERRY <span>Copyright 2021</span></a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Index</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        (function() {
+          var h, a, f;
+          a = document.getElementsByTagName('link');
+          for (h = 0; h < a.length; h++) {
+              f = a[h];
+              if (f.rel.toLowerCase().match(/stylesheet/) && f.href) {
+              var g = f.href.replace(/(&|\?)rnd=\d+/, '');
+              f.href = g + (g.match(/\?/) ? '&' : '?');
+              f.href += 'rnd=' + (new Date().valueOf());
+              }
+          } // for
+        })()   
+  
+      </script>
+</head>
+<body>
+    <header class="header">
+        <div class="block-header">
+            <div class="block-logo"><a class="logo" href="#">Logotipo</a></div>
+            <div class="menu-toggler-button">
+                <div class="toggler-wrapper-button">
+                    <span class="toggler-icon"></span>
+                </div>
+            </div>
+            <div class="navbar-collapsex">
+                <div class="wrapper-menubar">
+                    <ul>
+                        <li >
+                            <a href="./index.html">Inicio</a>
+                        </li>
+                        <li >
+                            <a href="./us.html">Nosotros</a>
+                        </li>
+                        <li >
+                            <a href="./products.html">Lo nuevo</a>
+                        </li>
+                        <li >
+                            <a href="./products.html">Otros</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper-container-main wrapper-container-contact">
+        <div class="wrapper-thank-you">
+            <h2 class="title-type-h">GRACIAS</h2>
+            <h2 class="title-type-h title-capitalize">fernanda</h2>
+            <p class="text-type-b">
+                Tu pedido fue enviado correctamente,
+                en breve nos pondremos en contacto.
+                <br>
+                No olvides enviar realizar el pago y enviar
+                tu voucher por via whatsapp con una foto
+                de tu  lista de pedido.
+            </p>
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <a href="#" class="menu-item">Chat</a>
+            <a href="#" class="menu-item">Nosotros</a>
+            <a href="#" class="menu-item">Reserva tu pedido</a>
+        </div>
+        <div>
+            <ul class="social-red">
+                <li><a href="#"><img src="./images/svgs/Vector-1.svg"></a></li>
+                <li><a href="#"><img src="./images/svgs/Vector-2.svg"></a></li>
+                <li><a href="#"><img src="./images/svgs/Vector-3.svg"></a></li>
+                <li><a href="#"><img src="./images/svgs/Vector-4.svg"></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <a href="#" class="menu-item">ONE BERRY <span>Copyright 2021</span></a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

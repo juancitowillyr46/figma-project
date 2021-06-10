@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimal-ui">
+    <meta name="apple-mobile-web-app-title" content="App name" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>Home | Index</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cssrefresh.frebsite.nl/js/cssrefresh.js"></script>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+      (function() {
+        var h, a, f;
+        a = document.getElementsByTagName('link');
+        for (h = 0; h < a.length; h++) {
+            f = a[h];
+            if (f.rel.toLowerCase().match(/stylesheet/) && f.href) {
+            var g = f.href.replace(/(&|\?)rnd=\d+/, '');
+            f.href = g + (g.match(/\?/) ? '&' : '?');
+            f.href += 'rnd=' + (new Date().valueOf());
+            }
+        } // for
+      })()   
+
+    </script>
+</head>
+<div class="web_login_background_opacity"></div>
+<body class="body" style="background-image: url(./images/svgs/fondo-1.jpg);background-repeat: no-repeat;width: 100%;background-size: cover;">
+    <header class="header header-login">
+        <div class="block-header">
+            <div class="block-logo"><a class="logo" href="#">Logotipo</a></div>
+            <div class="menu-toggler-button">
+                <div class="toggler-wrapper-button">
+                    <span class="toggler-icon"></span>
+                </div>
+            </div>
+            <div class="navbar-collapsex">
+                <div class="wrapper-menubar">
+                    <ul>
+                        <li >
+                            <a href="./index.html">Inicio</a>
+                        </li>
+                        <li >
+                            <a href="./us.html">Nosotros</a>
+                        </li>
+                        <li >
+                            <a href="./products.html">Lo nuevo</a>
+                        </li>
+                        <li >
+                            <a href="./products.html">Otros</a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid pr-0 pl-0 home-section">
+        <div class="wrapper-login">
+            <div class="wrapper-login-title">
+                <div class="title-type-i">
+                    <span>DESCUBRE </span>UN MUNDO LLENO DE OPORTUNIDADES
+                </div>
+            </div>
+            
+            <div class="wrapper-login-form">
+                <p class="text-type-f">Inicia sesión con tu cuenta</p>
+                <form class="form-login">
+                    <div class="form-group">
+                        <input type="email" class="form-control form-input form-input-b" placeholder="Ingrese su E-mail">  
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control form-input form-input-b" placeholder="Ingrese su contraseña">  
+                    </div>
+                    <div class="form-group">
+                        <label class="radio radio-gradient radio-type">
+                            <span class="radio__input">
+                                <input type="radio" name="radio-color">
+                                <span class="radio__control radio__control6">
+                                    <img src="./images/svgs/check-talla.svg">
+                                </span>
+                            </span>
+                            <span class="radio__label title-type-d title-type-d-d">Recordar</span>
+                        </label>
+                    </div>
+                    <button type="button" class="type-button-form type-button-form-b text-aling-center">ENTRAR</button>
+                </form>
+                <div class="wrapper-buttons-login">
+                    <a href="#" class="title-type-k">Registrate</a>
+                    <a href="#" class="title-type-j">Olvidaste tu contraseña</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer-home">
+        <div>
+          <ul class="social-red">
+            <li><a href="#"><img src="./images/svgs/home-fb.svg"></a></li>
+            <li><a href="#"><img src="./images/svgs/home-ig.svg"></a></li>
+            <li><a href="#"><img src="./images/svgs/home-tik.svg"></a></li>
+            <li><a href="#"><img src="./images/svgs/home-wp.svg"></a></li>
+          </ul>
+        </div>
+        <div class="copyright">
+            <a href="#" class="rs">MARCA <span>Copyright 2021</span></a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

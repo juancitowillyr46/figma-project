@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-09 15:52:31
+/* Smarty version 3.1.39, created on 2021-06-16 08:08:25
   from 'C:\xampp\htdocs\figma-project\Backend\Manager\core\components\migx\templates\mgr\iframewindow.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60c0c79f8faa94_78959324',
+  'unifunc' => 'content_60c99559d028d9_68029928',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c0c79f8faa94_78959324 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60c99559d028d9_68029928 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 MODx.window.MigxIframe = function(config) {

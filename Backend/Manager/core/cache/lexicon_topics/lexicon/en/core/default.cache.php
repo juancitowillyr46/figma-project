@@ -549,4 +549,6 @@
   'thursday' => 'Thursday',
   'friday' => 'Friday',
   'saturday' => 'Saturday',
+  'setting_extension_packages' => 'Extension Packages',
+  'setting_extension_packages_desc' => 'setting_extension_packages_desc',
 );

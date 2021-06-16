@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="pkgorder" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+	<object class="Contact" table="contact" extends="xPDOSimpleObject">
+		<field key="name" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="location" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="phone" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="red_social" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="about_me" dbtype="varchar" precision="150" phptype="string" null="true" />
+		<field key="sales_experience" dbtype="varchar" precision="150" phptype="string" null="true" />
+		<field key="createdon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="createdby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="editedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="editedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="deletedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="deletedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="publishedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="publishedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="published" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+		<field key="active" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+	</object>
+	<object class="MemberGroups" table="member_groups" extends="xPDOSimpleObject">
+		<field key="user_group" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+		<field key="member" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" />
+		<field key="role" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="1" index="index" />
+		<field key="rank" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" index="index" />
+
+		<index alias="role" name="role" primary="false" unique="false" type="BTREE" >
+			<column key="role" length="" collation="A" null="false" />
+		</index>
+		<index alias="rank" name="rank" primary="false" unique="false" type="BTREE" >
+			<column key="rank" length="" collation="A" null="false" />
+		</index>
+		<aggregate alias="Users" class="modUser" local="member" foreign="id" cardinality="one" owner="local" />
+	</object>
+	<object class="Order" table="order" extends="xPDOSimpleObject">
+		<field key="order_uuid" dbtype="varchar" precision="150" phptype="string" null="true" />
+		<field key="product_id" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="order_quantity" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="order_total" dbtype="decimal" precision="13,2" phptype="float" null="true" />
+		<field key="order_timestamp" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="createdon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="createdby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="editedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="editedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="deletedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="deletedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="publishedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="publishedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="published" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+		<field key="active" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+		<aggregate alias="OrderDetail" class="OrderDetail" local="id" foreign="order_id" cardinality="many" owner="local" />
+	</object>
+	<object class="OrderDetail" table="order_detail" extends="xPDOSimpleObject">
+		<field key="order_id" dbtype="int" precision="11" phptype="integer" null="true" index="index" />
+		<field key="oder_detail_uuid" dbtype="varchar" precision="150" phptype="string" null="true" />
+		<field key="order_size" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="order_color" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="order_price" dbtype="decimal" precision="13,2" phptype="float" null="true" />
+		<field key="order_quantity" dbtype="int" precision="11" phptype="integer" null="true" />
+		<field key="order_subtotal" dbtype="decimal" precision="13,2" phptype="float" null="true" />
+		<field key="createdon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="createdby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="editedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="editedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="deletedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="deletedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="publishedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="publishedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="published" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+		<field key="active" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+
+		<index alias="FK_ORDER_ORDER_DETAIL_idx" name="FK_ORDER_ORDER_DETAIL_idx" primary="false" unique="false" type="BTREE" >
+			<column key="order_id" length="" collation="A" null="true" />
+		</index>
+		<aggregate alias="Order" class="Order" local="order_id" foreign="id" cardinality="one" owner="foreign" />
+	</object>
+	<object class="UserAttributes" table="user_attributes" extends="xPDOSimpleObject">
+		<field key="internalKey" dbtype="int" precision="10" phptype="integer" null="false" index="unique" />
+		<field key="fullname" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="email" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="phone" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="mobilephone" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="blocked" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+		<field key="blockeduntil" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+		<field key="blockedafter" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+		<field key="logincount" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+		<field key="lastlogin" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+		<field key="thislogin" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+		<field key="failedlogincount" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+		<field key="sessionid" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="dob" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+		<field key="gender" dbtype="int" precision="1" phptype="integer" null="false" default="0" />
+		<field key="address" dbtype="text" phptype="string" null="false" />
+		<field key="country" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
+		<field key="city" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
+		<field key="state" dbtype="varchar" precision="25" phptype="string" null="false" default="" />
+		<field key="zip" dbtype="varchar" precision="25" phptype="string" null="false" default="" />
+		<field key="fax" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="photo" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
+		<field key="comment" dbtype="text" phptype="string" null="false" />
+		<field key="website" dbtype="varchar" precision="191" phptype="string" null="false" default="" />
+		<field key="extended" dbtype="text" phptype="string" null="true" />
+
+		<index alias="internalKey" name="internalKey" primary="false" unique="true" type="BTREE" >
+			<column key="internalKey" length="" collation="A" null="false" />
+		</index>
+		<aggregate alias="Users" class="modUser" local="internalKey" foreign="id" cardinality="one" owner="foreign" />
+	</object>
+	<object class="Users" table="users" extends="xPDOSimpleObject">
+		<field key="username" dbtype="varchar" precision="100" phptype="string" null="false" default="" index="unique" />
+		<field key="password" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+		<field key="cachepwd" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+		<field key="class_key" dbtype="varchar" precision="100" phptype="string" null="false" default="modUser" index="index" />
+		<field key="active" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="1" />
+		<field key="remote_key" dbtype="varchar" precision="191" phptype="string" null="true" index="index" />
+		<field key="remote_data" dbtype="text" phptype="string" null="true" />
+		<field key="hash_class" dbtype="varchar" precision="100" phptype="string" null="false" default="hashing.modNative" />
+		<field key="salt" dbtype="varchar" precision="100" phptype="string" null="false" default="" />
+		<field key="primary_group" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false" default="0" index="index" />
+		<field key="session_stale" dbtype="text" phptype="string" null="true" />
+		<field key="sudo" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+		<field key="createdon" dbtype="int" precision="20" phptype="integer" null="false" default="0" />
+
+		<index alias="username" name="username" primary="false" unique="true" type="BTREE" >
+			<column key="username" length="" collation="A" null="false" />
+		</index>
+		<index alias="class_key" name="class_key" primary="false" unique="false" type="BTREE" >
+			<column key="class_key" length="" collation="A" null="false" />
+		</index>
+		<index alias="remote_key" name="remote_key" primary="false" unique="false" type="BTREE" >
+			<column key="remote_key" length="" collation="A" null="true" />
+		</index>
+		<index alias="primary_group" name="primary_group" primary="false" unique="false" type="BTREE" >
+			<column key="primary_group" length="" collation="A" null="false" />
+		</index>
+		<aggregate alias="MemberGroups" class="modUserGroupMember" local="id" foreign="member" cardinality="one" owner="foreign" />
+		<aggregate alias="UserAttributes" class="modUserProfile" local="id" foreign="internalKey" cardinality="one" owner="local" />
+	</object>
+</model>

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-08 15:35:05
+/* Smarty version 3.1.39, created on 2021-06-16 15:45:12
   from 'C:\xampp\htdocs\figma-project\Backend\Manager\manager\templates\default\security\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60bf7209047cc6_91848315',
+  'unifunc' => 'content_60ca00682d35a7_01443444',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60bf7209047cc6_91848315 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60ca00682d35a7_01443444 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\figma-project\\Backend\\Manager\\core\\model\\smarty\\plugins\\modifier.replace.php','function'=>'smarty_modifier_replace',),));
 ?>
 <!doctype html>

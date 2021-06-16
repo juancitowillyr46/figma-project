@@ -80,7 +80,7 @@ abstract class modRestController {
     /** @var string $deleteMethod The method on the object to call for DELETE requests */
     public $deleteMethod = 'remove';
     /** @var array $allowedMethods An array of allowed request methods */
-    public $allowedMethods = array('GET', 'POST', 'PUT', 'DELETE');
+    public array $allowedMethods = array('GET', 'POST', 'PUT', 'DELETE');
     /** @var array $allowedMethods An array of allowed request methods */
     public $allowedHeaders = array('Content-Type');
 

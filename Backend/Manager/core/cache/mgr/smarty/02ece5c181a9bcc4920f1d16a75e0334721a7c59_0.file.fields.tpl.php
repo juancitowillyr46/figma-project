@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-09 15:53:36
+/* Smarty version 3.1.39, created on 2021-06-16 15:46:58
   from 'C:\xampp\htdocs\figma-project\Backend\Manager\core\components\migx\templates\mgr\fields.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60c0c7e02ee553_90670053',
+  'unifunc' => 'content_60ca00d285fa73_71122706',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c0c7e02ee553_90670053 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60ca00d285fa73_71122706 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\figma-project\\Backend\\Manager\\core\\model\\smarty\\plugins\\function.cycle.php','function'=>'smarty_function_cycle',),));
 echo (($tmp = @$_smarty_tpl->tpl_vars['OnResourceTVFormPrerender']->value)===null||$tmp==='' ? '' : $tmp);?>
 

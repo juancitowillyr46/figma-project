@@ -238,6 +238,46 @@
       ),
       1 => 
       array (
+        'text' => 'CMP Generator',
+        'parent' => 'components',
+        'action' => '1',
+        'description' => 'Generate CMP code',
+        'icon' => '',
+        'menuindex' => 0,
+        'params' => '',
+        'handler' => '',
+        'permissions' => '',
+        'namespace' => 'core',
+        'action_controller' => 'controllers/index',
+        'action_namespace' => 'cmpgenerator',
+        'id' => 'cmpgenerator',
+        'children' => 
+        array (
+        ),
+        'controller' => '',
+      ),
+      2 => 
+      array (
+        'text' => 'UICMPGenerator',
+        'parent' => 'components',
+        'action' => 'index',
+        'description' => 'Generate CMP code',
+        'icon' => '',
+        'menuindex' => 0,
+        'params' => '',
+        'handler' => '',
+        'permissions' => 'uicmpgenerator',
+        'namespace' => 'uicmpgenerator',
+        'action_controller' => NULL,
+        'action_namespace' => NULL,
+        'id' => 'uicmpgenerator',
+        'children' => 
+        array (
+        ),
+        'controller' => '',
+      ),
+      3 => 
+      array (
         'text' => 'MIGX',
         'parent' => 'components',
         'action' => 'index',
@@ -514,6 +554,86 @@
             ),
             'controller' => '',
           ),
+        ),
+        'controller' => '',
+      ),
+    ),
+    'controller' => '',
+  ),
+  4 => 
+  array (
+    'text' => 'Reportería',
+    'parent' => 'topnav',
+    'action' => '',
+    'description' => '',
+    'icon' => '',
+    'menuindex' => 4,
+    'params' => '',
+    'handler' => '',
+    'permissions' => 'permissionMenuReport',
+    'namespace' => 'core',
+    'action_controller' => NULL,
+    'action_namespace' => NULL,
+    'id' => 'Reportería',
+    'children' => 
+    array (
+      0 => 
+      array (
+        'text' => 'Ordenes',
+        'parent' => 'Reportería',
+        'action' => 'index',
+        'description' => 'Reportería',
+        'icon' => '',
+        'menuindex' => 0,
+        'params' => '&configs=migxorder',
+        'handler' => '',
+        'permissions' => 'permissionMigxOrder',
+        'namespace' => 'migx',
+        'action_controller' => NULL,
+        'action_namespace' => NULL,
+        'id' => 'Ordenes',
+        'children' => 
+        array (
+        ),
+        'controller' => '',
+      ),
+      1 => 
+      array (
+        'text' => 'Contacto',
+        'parent' => 'Reportería',
+        'action' => 'index',
+        'description' => 'Reportería',
+        'icon' => '',
+        'menuindex' => 1,
+        'params' => '&configs=migxcontact',
+        'handler' => '',
+        'permissions' => 'permissionMigxContact',
+        'namespace' => 'migx',
+        'action_controller' => NULL,
+        'action_namespace' => NULL,
+        'id' => 'Contacto',
+        'children' => 
+        array (
+        ),
+        'controller' => '',
+      ),
+      2 => 
+      array (
+        'text' => 'Clientes',
+        'parent' => 'Reportería',
+        'action' => 'index',
+        'description' => 'Reporteria',
+        'icon' => '',
+        'menuindex' => 2,
+        'params' => '&configs=migxusers',
+        'handler' => '',
+        'permissions' => 'permissionMigxUsers',
+        'namespace' => 'migx',
+        'action_controller' => NULL,
+        'action_namespace' => NULL,
+        'id' => 'Clientes',
+        'children' => 
+        array (
         ),
         'controller' => '',
       ),

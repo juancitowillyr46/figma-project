@@ -390,6 +390,10 @@ select::-ms-expand {
         width: 472px;
         margin: 0 auto;
     }
+
+    label.error {
+        width: 472px;
+    }
 }
 
 .wrapper-container-us .title-type-h{
@@ -1447,7 +1451,7 @@ select::-ms-expand {
 .form-control:focus {
     color: #000000;
     background-color: #FFFFFF !important;
-    border-color: #bfbfbf !important;
+    border-color: #bfbfbf;
     outline: 0 !important;
     box-shadow: none !important;
 }
@@ -1510,6 +1514,10 @@ select::-ms-expand {
 
 @media (min-width: 1024px) and (max-width: 1920px) { 
     .form-input-a {
+        width: 472px;
+    }
+
+    label.error {
         width: 472px;
     }
 }
@@ -2109,4 +2117,33 @@ select::-ms-expand {
 
 .header-login {
     position: absolute;
+}
+
+label.error {
+    /* width: 100%; */
+    font-family: 'SF Pro Display Thin';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: red;
+    display: block;
+}
+
+input.error, 
+input.error:focus,
+input.error:active {
+    /* width: 100%; */
+    font-family: 'SF Pro Display Thin';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: red;
+    border: 1px solid red;
+    display: block;
 }

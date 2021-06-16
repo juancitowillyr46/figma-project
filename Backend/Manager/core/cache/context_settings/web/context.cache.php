@@ -7,6 +7,7 @@
     'index.html' => 1,
     'login' => 2,
     'register' => 3,
+    'modjwt/' => 14,
     'about' => 4,
     'contact' => 6,
     'welcome-user' => 8,
@@ -17,6 +18,9 @@
     'products/blazer-emma.html' => 10,
     'products/producto-1.html' => 13,
     'orders-thank-you' => 12,
+    'modjwt/token.json' => 15,
+    'modjwt/validate.json' => 16,
+    'modjwt/custom.json' => 17,
   ),
   'resourceMap' => 
   array (
@@ -25,11 +29,12 @@
       0 => 1,
       1 => 2,
       2 => 3,
-      3 => 4,
-      4 => 6,
-      5 => 8,
-      6 => 9,
-      7 => 11,
+      3 => 14,
+      4 => 4,
+      5 => 6,
+      6 => 8,
+      7 => 9,
+      8 => 11,
     ),
     3 => 
     array (
@@ -47,6 +52,12 @@
     11 => 
     array (
       0 => 12,
+    ),
+    14 => 
+    array (
+      0 => 15,
+      1 => 16,
+      2 => 17,
     ),
   ),
   'webLinkMap' => 
@@ -75,6 +86,10 @@
     array (
       5 => '5',
     ),
+    'OnMODXInit' => 
+    array (
+      6 => '6',
+    ),
     'OnPluginFormPrerender' => 
     array (
       1 => '1',
@@ -92,6 +107,10 @@
       1 => '1',
       2 => '2',
     ),
+    'OnSiteRefresh' => 
+    array (
+      6 => '6',
+    ),
     'OnSnipFormPrerender' => 
     array (
       1 => '1',
@@ -107,6 +126,10 @@
     'OnTVInputRenderList' => 
     array (
       3 => '3',
+    ),
+    'OnWebPagePrerender' => 
+    array (
+      6 => '6',
     ),
   ),
   'pluginCache' => 
@@ -502,6 +525,54 @@ if (is_array($resizeConfigs) && count($resizeConfigs) > 0) {
       'static' => '0',
       'static_file' => '',
     ),
+    6 => 
+    array (
+      'id' => '6',
+      'source' => '1',
+      'property_preprocess' => '0',
+      'name' => 'pdoTools',
+      'description' => '',
+      'editor_type' => '0',
+      'category' => '8',
+      'cache_type' => '0',
+      'plugincode' => '/** @var modX $modx */
+switch ($modx->event->name) {
+
+    case \'OnMODXInit\':
+        $fqn = $modx->getOption(\'pdoTools.class\', null, \'pdotools.pdotools\', true);
+        $path = $modx->getOption(\'pdotools_class_path\', null, MODX_CORE_PATH . \'components/pdotools/model/\', true);
+        $modx->loadClass($fqn, $path, false, true);
+
+        $fqn = $modx->getOption(\'pdoFetch.class\', null, \'pdotools.pdofetch\', true);
+        $path = $modx->getOption(\'pdofetch_class_path\', null, MODX_CORE_PATH . \'components/pdotools/model/\', true);
+        $modx->loadClass($fqn, $path, false, true);
+        break;
+
+    case \'OnSiteRefresh\':
+        /** @var pdoTools $pdoTools */
+        if ($pdoTools = $modx->getService(\'pdoTools\')) {
+            if ($pdoTools->clearFileCache()) {
+                $modx->log(modX::LOG_LEVEL_INFO, $modx->lexicon(\'refresh_default\') . \': pdoTools\');
+            }
+        }
+        break;
+
+    case \'OnWebPagePrerender\':
+        $parser = $modx->getParser();
+        if ($parser instanceof pdoParser) {
+            foreach ($parser->pdoTools->ignores as $key => $val) {
+                $modx->resource->_output = str_replace($key, $val, $modx->resource->_output);
+            }
+        }
+        break;
+}',
+      'locked' => '0',
+      'properties' => NULL,
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => 'core/components/pdotools/elements/plugins/plugin.pdotools.php',
+    ),
   ),
   'policies' => 
   array (
@@ -705,6 +776,36 @@ if (is_array($resizeConfigs) && count($resizeConfigs) > 0) {
             'view_unpublished' => true,
             'view_user' => true,
             'workspaces' => true,
+          ),
+        ),
+        2 => 
+        array (
+          'principal' => 2,
+          'authority' => 9999,
+          'policy' => 
+          array (
+            'load' => true,
+            'list' => true,
+            'view' => true,
+            'save' => true,
+            'remove' => true,
+            'copy' => true,
+            'view_unpublished' => true,
+          ),
+        ),
+        3 => 
+        array (
+          'principal' => 3,
+          'authority' => 9999,
+          'policy' => 
+          array (
+            'load' => true,
+            'list' => true,
+            'view' => true,
+            'save' => true,
+            'remove' => true,
+            'copy' => true,
+            'view_unpublished' => true,
           ),
         ),
       ),

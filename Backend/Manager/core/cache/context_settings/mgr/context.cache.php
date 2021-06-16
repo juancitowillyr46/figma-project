@@ -18,8 +18,8 @@
     ),
     'OnDocFormPrerender' => 
     array (
-      3 => '3',
       1 => '1',
+      3 => '3',
     ),
     'OnFileCreateFormPrerender' => 
     array (
@@ -38,6 +38,10 @@
       1 => '1',
       2 => '2',
     ),
+    'OnMODXInit' => 
+    array (
+      6 => '6',
+    ),
     'OnPluginFormPrerender' => 
     array (
       1 => '1',
@@ -55,6 +59,10 @@
       2 => '2',
       1 => '1',
     ),
+    'OnSiteRefresh' => 
+    array (
+      6 => '6',
+    ),
     'OnSnipFormPrerender' => 
     array (
       1 => '1',
@@ -70,6 +78,10 @@
     'OnTVInputRenderList' => 
     array (
       3 => '3',
+    ),
+    'OnWebPagePrerender' => 
+    array (
+      6 => '6',
     ),
   ),
   'pluginCache' => 
@@ -465,6 +477,54 @@ if (is_array($resizeConfigs) && count($resizeConfigs) > 0) {
       'static' => '0',
       'static_file' => '',
     ),
+    6 => 
+    array (
+      'id' => '6',
+      'source' => '1',
+      'property_preprocess' => '0',
+      'name' => 'pdoTools',
+      'description' => '',
+      'editor_type' => '0',
+      'category' => '8',
+      'cache_type' => '0',
+      'plugincode' => '/** @var modX $modx */
+switch ($modx->event->name) {
+
+    case \'OnMODXInit\':
+        $fqn = $modx->getOption(\'pdoTools.class\', null, \'pdotools.pdotools\', true);
+        $path = $modx->getOption(\'pdotools_class_path\', null, MODX_CORE_PATH . \'components/pdotools/model/\', true);
+        $modx->loadClass($fqn, $path, false, true);
+
+        $fqn = $modx->getOption(\'pdoFetch.class\', null, \'pdotools.pdofetch\', true);
+        $path = $modx->getOption(\'pdofetch_class_path\', null, MODX_CORE_PATH . \'components/pdotools/model/\', true);
+        $modx->loadClass($fqn, $path, false, true);
+        break;
+
+    case \'OnSiteRefresh\':
+        /** @var pdoTools $pdoTools */
+        if ($pdoTools = $modx->getService(\'pdoTools\')) {
+            if ($pdoTools->clearFileCache()) {
+                $modx->log(modX::LOG_LEVEL_INFO, $modx->lexicon(\'refresh_default\') . \': pdoTools\');
+            }
+        }
+        break;
+
+    case \'OnWebPagePrerender\':
+        $parser = $modx->getParser();
+        if ($parser instanceof pdoParser) {
+            foreach ($parser->pdoTools->ignores as $key => $val) {
+                $modx->resource->_output = str_replace($key, $val, $modx->resource->_output);
+            }
+        }
+        break;
+}',
+      'locked' => '0',
+      'properties' => NULL,
+      'disabled' => '0',
+      'moduleguid' => '',
+      'static' => '0',
+      'static_file' => 'core/components/pdotools/elements/plugins/plugin.pdotools.php',
+    ),
   ),
   'policies' => 
   array (
@@ -659,6 +719,200 @@ if (is_array($resizeConfigs) && count($resizeConfigs) > 0) {
             'view_unpublished' => true,
             'view_user' => true,
             'workspaces' => true,
+          ),
+        ),
+        1 => 
+        array (
+          'principal' => 2,
+          'authority' => 9999,
+          'policy' => 
+          array (
+            'about' => false,
+            'access_permissions' => false,
+            'actions' => false,
+            'change_password' => false,
+            'change_profile' => true,
+            'charsets' => false,
+            'class_map' => true,
+            'components' => false,
+            'content_types' => false,
+            'countries' => true,
+            'create' => false,
+            'credits' => false,
+            'customize_forms' => false,
+            'dashboards' => false,
+            'database' => false,
+            'database_truncate' => false,
+            'delete_category' => false,
+            'delete_chunk' => false,
+            'delete_context' => false,
+            'delete_document' => true,
+            'delete_eventlog' => false,
+            'delete_plugin' => false,
+            'delete_propertyset' => false,
+            'delete_role' => false,
+            'delete_snippet' => false,
+            'delete_static_resource' => true,
+            'delete_symlink' => true,
+            'delete_template' => false,
+            'delete_tv' => false,
+            'delete_user' => false,
+            'delete_weblink' => true,
+            'directory_chmod' => false,
+            'directory_create' => false,
+            'directory_list' => true,
+            'directory_remove' => false,
+            'directory_update' => false,
+            'edit_category' => false,
+            'edit_chunk' => false,
+            'edit_context' => false,
+            'edit_document' => true,
+            'edit_locked' => false,
+            'edit_plugin' => false,
+            'edit_propertyset' => false,
+            'edit_role' => false,
+            'edit_snippet' => false,
+            'edit_static_resource' => true,
+            'edit_symlink' => true,
+            'edit_template' => false,
+            'edit_tv' => false,
+            'edit_user' => false,
+            'edit_weblink' => true,
+            'element_tree' => false,
+            'empty_cache' => false,
+            'error_log_erase' => false,
+            'error_log_view' => false,
+            'events' => false,
+            'export_static' => false,
+            'file_create' => false,
+            'file_list' => true,
+            'file_manager' => true,
+            'file_remove' => false,
+            'file_tree' => true,
+            'file_unpack' => false,
+            'file_update' => true,
+            'file_upload' => false,
+            'file_view' => true,
+            'flush_sessions' => false,
+            'frames' => true,
+            'help' => true,
+            'home' => true,
+            'import_static' => false,
+            'languages' => false,
+            'lexicons' => false,
+            'list' => true,
+            'load' => true,
+            'logout' => true,
+            'logs' => false,
+            'menus' => false,
+            'menu_reports' => true,
+            'menu_security' => false,
+            'menu_site' => true,
+            'menu_support' => true,
+            'menu_system' => false,
+            'menu_tools' => true,
+            'menu_trash' => false,
+            'menu_user' => true,
+            'messages' => false,
+            'namespaces' => false,
+            'new_category' => false,
+            'new_chunk' => false,
+            'new_context' => false,
+            'new_document' => true,
+            'new_document_in_root' => false,
+            'new_plugin' => false,
+            'new_propertyset' => false,
+            'new_role' => false,
+            'new_snippet' => false,
+            'new_static_resource' => true,
+            'new_symlink' => true,
+            'new_template' => false,
+            'new_tv' => false,
+            'new_user' => false,
+            'new_weblink' => true,
+            'packages' => false,
+            'permissionMenuReport' => true,
+            'permissionMigxContact' => true,
+            'permissionMigxOrder' => true,
+            'permissionMigxUsers' => true,
+            'policy_delete' => false,
+            'policy_edit' => false,
+            'policy_new' => false,
+            'policy_save' => false,
+            'policy_template_delete' => false,
+            'policy_template_edit' => false,
+            'policy_template_new' => false,
+            'policy_template_save' => false,
+            'policy_template_view' => false,
+            'policy_view' => false,
+            'property_sets' => false,
+            'providers' => false,
+            'publish_document' => false,
+            'purge_deleted' => false,
+            'remove' => false,
+            'remove_locks' => false,
+            'resourcegroup_delete' => false,
+            'resourcegroup_edit' => false,
+            'resourcegroup_new' => false,
+            'resourcegroup_resource_edit' => false,
+            'resourcegroup_resource_list' => false,
+            'resourcegroup_save' => false,
+            'resourcegroup_view' => false,
+            'resource_duplicate' => true,
+            'resource_quick_create' => false,
+            'resource_quick_update' => false,
+            'resource_tree' => true,
+            'save' => false,
+            'save_category' => false,
+            'save_chunk' => false,
+            'save_context' => false,
+            'save_document' => true,
+            'save_plugin' => false,
+            'save_propertyset' => false,
+            'save_role' => false,
+            'save_snippet' => false,
+            'save_template' => false,
+            'save_tv' => false,
+            'save_user' => false,
+            'search' => false,
+            'settings' => false,
+            'set_sudo' => false,
+            'sources' => false,
+            'source_delete' => false,
+            'source_edit' => false,
+            'source_save' => false,
+            'source_view' => true,
+            'steal_locks' => false,
+            'tree_show_element_ids' => false,
+            'tree_show_resource_ids' => true,
+            'undelete_document' => false,
+            'unlock_element_properties' => false,
+            'unpublish_document' => false,
+            'usergroup_delete' => false,
+            'usergroup_edit' => false,
+            'usergroup_new' => false,
+            'usergroup_save' => false,
+            'usergroup_user_edit' => false,
+            'usergroup_user_list' => false,
+            'usergroup_view' => false,
+            'view' => true,
+            'view_category' => false,
+            'view_chunk' => false,
+            'view_context' => false,
+            'view_document' => true,
+            'view_element' => false,
+            'view_eventlog' => false,
+            'view_offline' => false,
+            'view_plugin' => false,
+            'view_propertyset' => false,
+            'view_role' => false,
+            'view_snippet' => false,
+            'view_sysinfo' => false,
+            'view_template' => true,
+            'view_tv' => false,
+            'view_unpublished' => false,
+            'view_user' => false,
+            'workspaces' => false,
           ),
         ),
       ),

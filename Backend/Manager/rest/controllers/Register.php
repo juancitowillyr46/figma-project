@@ -3,7 +3,7 @@
 
 class CustomControllerRegister extends modRestController
 {
-    public array $allowedMethods = array('POST');
+    public $allowedMethods = array('POST');
 
     const REGISTER_GROUPS = 'Customer:Member';
     const REGISTER_ACTIVATION = true;

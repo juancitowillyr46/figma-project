@@ -3,16 +3,16 @@
 
 class SecurityToken
 {
-    public Modx $modx;
+    public $modx;
 
-    private string $accessToken;
+    private $accessToken;
 
-    public function __construct(Modx $modx)
+    public function __construct($modx)
     {
         $this->modx = $modx;
     }
 
-    public function encodeJwt(array $payload): string {
+    public function encodeJwt(array $payload) {
         $corePath  = $this->modx->getOption('core_path', null, MODX_CORE_PATH) . 'components/modjwt/';
         $scriptProperties['corePath'] = $corePath;
         $modJWT = $this->modx->getService(
@@ -42,7 +42,7 @@ class SecurityToken
         return $decodeToken;
     }
 
-    public function verifyToken(array $headers): ?array {
+    public function verifyToken(array $headers) {
 
         if(!array_key_exists('Token', $headers)){
             throw new Exception('Token Security not find', 401);
@@ -65,7 +65,7 @@ class SecurityToken
     /**
      * @return string
      */
-    public function getAccessToken(): string
+    public function getAccessToken()
     {
         return $this->accessToken;
     }
@@ -73,7 +73,7 @@ class SecurityToken
     /**
      * @param string $accessToken
      */
-    public function setAccessToken(string $accessToken): void
+    public function setAccessToken(string $accessToken)
     {
         $this->accessToken = $accessToken;
     }

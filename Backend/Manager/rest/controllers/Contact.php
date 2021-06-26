@@ -3,7 +3,7 @@
 
 class CustomControllerContact extends modRestController
 {
-    public array $allowedMethods = array('POST');
+    public $allowedMethods = array('POST');
 
     public function post() {
         try {

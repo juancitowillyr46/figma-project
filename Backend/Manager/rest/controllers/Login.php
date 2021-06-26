@@ -6,7 +6,7 @@ class CustomControllerLogin extends modRestController
     const LOGIN_CONTEXT = 'web';
     const LOGIN_REMEMBER_ME = false;
 
-    public array $allowedMethods = array('POST');
+    public $allowedMethods = array('POST');
 
     public function post()
     {

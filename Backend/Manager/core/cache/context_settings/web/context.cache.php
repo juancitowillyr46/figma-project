@@ -4,6 +4,7 @@
   ),
   'aliasMap' => 
   array (
+    'configuraciones.html' => 19,
     'index.html' => 1,
     'login' => 2,
     'register' => 3,
@@ -12,29 +13,36 @@
     'contact' => 6,
     'welcome-user' => 8,
     'products' => 9,
-    'orders' => 11,
+    'order-detail' => 11,
+    'en-mantenimiento.html' => 18,
+    'conocenos.html' => 22,
     'register-thank-you' => 5,
     'contact-thank-you' => 7,
     'products/blazer-emma.html' => 10,
     'products/producto-1.html' => 13,
-    'orders-thank-you' => 12,
+    'order-summary' => 20,
+    'order-thank-you' => 12,
     'modjwt/token.json' => 15,
     'modjwt/validate.json' => 16,
     'modjwt/custom.json' => 17,
+    'order-summary/duplicate-of-orders-thank-you.html' => 21,
   ),
   'resourceMap' => 
   array (
     0 => 
     array (
-      0 => 1,
-      1 => 2,
-      2 => 3,
-      3 => 14,
-      4 => 4,
-      5 => 6,
-      6 => 8,
-      7 => 9,
-      8 => 11,
+      0 => 19,
+      1 => 1,
+      2 => 2,
+      3 => 3,
+      4 => 14,
+      5 => 4,
+      6 => 6,
+      7 => 8,
+      8 => 9,
+      9 => 11,
+      10 => 18,
+      11 => 22,
     ),
     3 => 
     array (
@@ -51,13 +59,18 @@
     ),
     11 => 
     array (
-      0 => 12,
+      0 => 20,
+      1 => 12,
     ),
     14 => 
     array (
       0 => 15,
       1 => 16,
       2 => 17,
+    ),
+    20 => 
+    array (
+      0 => 21,
     ),
   ),
   'webLinkMap' => 

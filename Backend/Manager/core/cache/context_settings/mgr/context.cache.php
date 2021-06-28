@@ -35,8 +35,8 @@
     ),
     'OnManagerPageBeforeRender' => 
     array (
-      1 => '1',
       2 => '2',
+      1 => '1',
     ),
     'OnMODXInit' => 
     array (
@@ -56,8 +56,8 @@
     ),
     'OnRichTextEditorRegister' => 
     array (
-      2 => '2',
       1 => '1',
+      2 => '2',
     ),
     'OnSiteRefresh' => 
     array (

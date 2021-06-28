@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-16 08:08:26
+/* Smarty version 3.1.39, created on 2021-06-26 19:30:33
   from 'C:\xampp\htdocs\figma-project\Backend\Manager\manager\templates\default\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60c9955a964122_62592878',
+  'unifunc' => 'content_60d76439d91910_53004878',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '71bc4c809dc160eecf8820f787bc1fdb927616b9' => 
     array (
       0 => 'C:\\xampp\\htdocs\\figma-project\\Backend\\Manager\\manager\\templates\\default\\header.tpl',
-      1 => 1622210678,
+      1 => 1622192678,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60c9955a964122_62592878 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60d76439d91910_53004878 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" dir="<?php echo $_smarty_tpl->tpl_vars['_config']->value['manager_direction'];?>
 " lang="<?php echo $_smarty_tpl->tpl_vars['_config']->value['manager_lang_attribute'];?>

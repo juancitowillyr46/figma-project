@@ -11,9 +11,9 @@ $(document).ready(function() {
     var success = verifyLogin({});
     success.done(function(response) { 
         $(".wrapper-menubar > ul").append('<li><a href="#" onclick="logout(event)">Cerrar sesión</a></li>');
-    });
-    success.fail(function(response) {
-        if(response) {
+    }).fail(function(response) {
+        console.log(response);
+        if(response['status'] != '') {
             localStorage.clear();
             location.href = './login';
         }

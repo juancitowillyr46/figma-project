@@ -1,4 +1,4 @@
-var BASE_URL_API = 'http://localhost:8094/rest/';
+var BASE_URL_API = 'https://www.oneberry.pe/rest/';
 
 disabledButton = function(element, disabledBoolean) {
     $("#" + element).attr("disabled", disabledBoolean);

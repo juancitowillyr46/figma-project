@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.39, created on 2021-06-16 15:46:58
+/* Smarty version 3.1.39, created on 2021-06-26 19:35:15
   from 'C:\xampp\htdocs\figma-project\Backend\Manager\core\components\migx\templates\mgr\fields.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.39',
-  'unifunc' => 'content_60ca00d285fa73_71122706',
+  'unifunc' => 'content_60d76553a07758_63332932',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '02ece5c181a9bcc4920f1d16a75e0334721a7c59' => 
     array (
       0 => 'C:\\xampp\\htdocs\\figma-project\\Backend\\Manager\\core\\components\\migx\\templates\\mgr\\fields.tpl',
-      1 => 1623245878,
+      1 => 1623227878,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_60ca00d285fa73_71122706 (Smarty_Internal_Template $_smarty_tpl) {
+function content_60d76553a07758_63332932 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\xampp\\htdocs\\figma-project\\Backend\\Manager\\core\\model\\smarty\\plugins\\function.cycle.php','function'=>'smarty_function_cycle',),));
 echo (($tmp = @$_smarty_tpl->tpl_vars['OnResourceTVFormPrerender']->value)===null||$tmp==='' ? '' : $tmp);?>
 

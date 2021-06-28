@@ -1,0 +1,22 @@
+[22-Jun-2021 03:23:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getOption() on null in /home1/onebeyrc/public_html/core/model/modx/sources/modmediasource.class.php:606
+Stack trace:
+#0 /home1/onebeyrc/public_html/core/model/modx/processors/system/phpthumb.class.php(54): modMediaSource->prepareSrcForThumb('assets/gallery/...')
+#1 /home1/onebeyrc/public_html/core/model/modx/modprocessor.class.php(185): modSystemPhpThumbProcessor->process()
+#2 /home1/onebeyrc/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home1/onebeyrc/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('phpthumb', Array, Array)
+#4 /home1/onebeyrc/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#5 /home1/onebeyrc/public_html/core/model/modx/modconnectorrequest.class.php(73): modConnectorRequest->prepareResponse(Array)
+#6 /home1/onebeyrc/public_html/connectors/system/phpthumb.php(19): modConnectorRequest->handleRequest(Array)
+#7 {main}
+  thrown in /home1/onebeyrc/public_html/core/model/modx/sources/modmediasource.class.php on line 606
+[22-Jun-2021 03:23:09 UTC] PHP Fatal error:  Uncaught Error: Call to a member function getOption() on null in /home1/onebeyrc/public_html/core/model/modx/sources/modmediasource.class.php:606
+Stack trace:
+#0 /home1/onebeyrc/public_html/core/model/modx/processors/system/phpthumb.class.php(54): modMediaSource->prepareSrcForThumb('assets/gallery/...')
+#1 /home1/onebeyrc/public_html/core/model/modx/modprocessor.class.php(185): modSystemPhpThumbProcessor->process()
+#2 /home1/onebeyrc/public_html/core/model/modx/modx.class.php(1770): modProcessor->run()
+#3 /home1/onebeyrc/public_html/core/model/modx/modconnectorresponse.class.php(144): modX->runProcessor('phpthumb', Array, Array)
+#4 /home1/onebeyrc/public_html/core/model/modx/modconnectorrequest.class.php(86): modConnectorResponse->outputContent(Array)
+#5 /home1/onebeyrc/public_html/core/model/modx/modconnectorrequest.class.php(73): modConnectorRequest->prepareResponse(Array)
+#6 /home1/onebeyrc/public_html/connectors/system/phpthumb.php(19): modConnectorRequest->handleRequest(Array)
+#7 {main}
+  thrown in /home1/onebeyrc/public_html/core/model/modx/sources/modmediasource.class.php on line 606

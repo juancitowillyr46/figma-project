@@ -7,9 +7,9 @@ $database_server = 'localhost';
 $database_user = 'root';
 $database_password = '';
 $database_connection_charset = 'utf8mb4';
-$dbase = 'db_orders_app';
+$dbase = 'onebeyrc_modx';
 $table_prefix = 'modx_';
-$database_dsn = 'mysql:host=localhost;dbname=db_orders_app;charset=utf8mb4';
+$database_dsn = 'mysql:host=localhost;dbname=onebeyrc_modx;charset=utf8mb4';
 $config_options = array (
 );
 $driver_options = array (
@@ -62,7 +62,7 @@ if (!defined('MODX_HTTP_HOST')) {
         $http_host='localhost:8094';
         define('MODX_HTTP_HOST', $http_host);
     } else {
-        $http_host= array_key_exists('HTTP_HOST', $_SERVER) ? htmlspecialchars($_SERVER['HTTP_HOST'], ENT_QUOTES) : 'localhost:8094';
+        $http_host= array_key_exists('HTTP_HOST', $_SERVER) ? htmlspecialchars($_SERVER['HTTP_HOST'], ENT_QUOTES) : 'oneberry.pe';
         if ($_SERVER['SERVER_PORT'] != 80) {
             $http_host= str_replace(':' . $_SERVER['SERVER_PORT'], '', $http_host); // remove port from HTTP_HOST
         }

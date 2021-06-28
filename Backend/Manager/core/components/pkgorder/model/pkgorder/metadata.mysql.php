@@ -3,11 +3,13 @@
 $xpdo_meta_map = array (
   'xPDOSimpleObject' => 
   array (
-    0 => 'Contact',
-    1 => 'MemberGroups',
-    2 => 'Order',
-    3 => 'OrderDetail',
-    4 => 'UserAttributes',
-    5 => 'Users',
+    0 => 'ConfigColor',
+    1 => 'ConfigSize',
+    2 => 'Contact',
+    3 => 'MemberGroups',
+    4 => 'Order',
+    5 => 'OrderDetail',
+    6 => 'UserAttributes',
+    7 => 'Users',
   ),
 );

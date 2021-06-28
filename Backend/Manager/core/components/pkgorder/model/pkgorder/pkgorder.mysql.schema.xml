@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <model package="pkgorder" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+	<object class="ConfigColor" table="config_color" extends="xPDOSimpleObject">
+		<field key="name" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="value" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="hexadecimal" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="createdon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="createdby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="editedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="editedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="deletedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="deletedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="publishedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="publishedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="published" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+		<field key="active" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+	</object>
+	<object class="ConfigSize" table="config_size" extends="xPDOSimpleObject">
+		<field key="name" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="value" dbtype="varchar" precision="45" phptype="string" null="true" />
+		<field key="createdon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="createdby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="editedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="editedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="deletedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="deletedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="publishedon" dbtype="datetime" phptype="datetime" null="true" />
+		<field key="publishedby" dbtype="int" precision="10" phptype="integer" null="true" />
+		<field key="published" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+		<field key="active" dbtype="tinyint" precision="4" phptype="integer" null="true" />
+	</object>
 	<object class="Contact" table="contact" extends="xPDOSimpleObject">
 		<field key="name" dbtype="varchar" precision="45" phptype="string" null="true" />
 		<field key="location" dbtype="varchar" precision="45" phptype="string" null="true" />

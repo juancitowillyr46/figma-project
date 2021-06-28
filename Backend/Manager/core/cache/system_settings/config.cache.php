@@ -259,7 +259,7 @@
 
     <p>Regards,<br />Site Administrator</p>',
   'site_name' => 'MODX Revolution',
-  'site_start' => '1',
+  'site_start' => '18',
   'site_status' => '1',
   'site_unavailable_message' => 'The site is currently unavailable',
   'site_unavailable_page' => '0',
